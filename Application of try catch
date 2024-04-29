@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class TryCatch {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ try {
+ System.out.println("Program to perform Division \n");
+ System.out.print("Enter a number: ");
+ int a = sc.nextInt();
+ System.out.print("Enter another number: ");
+ int b = sc.nextInt();
+ if (b == 0) {
+ throw new ArithmeticException("Cannot divide by zero");
+ }
+ int c = a / b;
+ System.out.println("Result: " + c);
+ } catch (ArithmeticException e) {
+ System.out.println(e.getMessage());
+ } finally {
+ System.out.println("End");
+ }
+ }
+}
